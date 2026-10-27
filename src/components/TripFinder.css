@@ -1,0 +1,123 @@
+.finder-wrap {
+  position: relative;
+  z-index: 5;
+  margin-top: -66px;
+}
+
+.finder {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.finder__field {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 18px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.3s;
+  position: relative;
+}
+
+.finder__field + .finder__field::before {
+  content: '';
+  position: absolute;
+  left: -4px;
+  top: 22%;
+  bottom: 22%;
+  width: 1px;
+  background: var(--line);
+}
+
+.finder__field:hover {
+  background: var(--sand-50);
+}
+
+.finder__icon {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--gold-100);
+  color: var(--gold-600);
+  display: grid;
+  place-items: center;
+}
+
+.finder__body {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+}
+
+.finder__label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.finder select,
+.finder input {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+  background: transparent;
+  padding: 2px 0 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  width: 100%;
+  outline: none;
+  cursor: pointer;
+  min-height: 26px;
+}
+
+.finder__submit {
+  height: 64px;
+  padding: 0 30px;
+  border-radius: var(--radius);
+}
+
+@media (max-width: 1024px) {
+  .finder {
+    grid-template-columns: 1fr 1fr;
+  }
+  .finder__field:nth-child(3)::before {
+    display: none;
+  }
+  .finder__submit {
+    height: 58px;
+  }
+}
+
+@media (max-width: 640px) {
+  .finder-wrap {
+    margin-top: -48px;
+  }
+  .finder {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .finder__field + .finder__field::before {
+    left: 18px;
+    right: 18px;
+    top: 0;
+    bottom: auto;
+    width: auto;
+    height: 1px;
+    display: block;
+  }
+  .finder__submit {
+    margin-top: 8px;
+  }
+}

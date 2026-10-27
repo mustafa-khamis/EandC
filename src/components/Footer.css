@@ -1,0 +1,144 @@
+.footer {
+  background: var(--forest-950);
+  color: rgba(244, 237, 224, 0.72);
+  padding: 96px 0 32px;
+  overflow: hidden;
+}
+
+.footer__top {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+  gap: 48px;
+}
+
+.footer__brand p {
+  margin-top: 22px;
+  max-width: 340px;
+  font-size: 15px;
+}
+
+.footer__social {
+  display: flex;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.footer__social a {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--sand-100);
+  transition: all 0.3s;
+}
+
+.footer__social a:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--forest-900);
+}
+
+.footer__col h4 {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 22px;
+}
+
+.footer__col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 15px;
+}
+
+.footer__col a {
+  transition: color 0.3s;
+}
+
+.footer__col a:hover {
+  color: var(--sand-50);
+}
+
+.footer__contact li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.footer__contact svg {
+  flex-shrink: 0;
+  margin-top: 4px;
+  color: var(--gold);
+}
+
+.footer__cta {
+  margin-top: 26px;
+}
+
+.footer__word {
+  margin: 80px 0 24px;
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 11vw, 10rem);
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(244, 237, 224, 0.14);
+  text-align: center;
+  user-select: none;
+}
+
+.footer__word em {
+  -webkit-text-stroke: 1px rgba(212, 162, 76, 0.45);
+}
+
+.footer__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 13.5px;
+}
+
+.footer__top-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  color: var(--sand-100);
+}
+
+.footer__top-link:hover {
+  color: var(--gold);
+}
+
+@media (max-width: 1024px) {
+  .footer__top {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding-top: 72px;
+  }
+  .footer__top {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .footer__word {
+    font-size: 13vw;
+    margin-top: 56px;
+  }
+}
